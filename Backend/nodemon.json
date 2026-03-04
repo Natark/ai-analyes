@@ -1,0 +1,9 @@
+{
+    "ignore": [
+        "uploads/*",
+        "database.sqlite",
+        "database.sqlite-journal",
+        "*.log",
+        "test_*.js"
+    ]
+}

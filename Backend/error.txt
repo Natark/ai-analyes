@@ -1,0 +1,13 @@
+UPLOAD FAIL: Error: Failed to parse PDF: Class constructors cannot be invoked without 'new'
+    at extractTextFromPDF (file:///C:/Users/Natarajan/stark/Backend/server.js:75:15)
+    at file:///C:/Users/Natarajan/stark/Backend/server.js:266:32
+    at Layer.handleRequest (C:\Users\Natarajan\stark\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Natarajan\stark\Backend\node_modules\router\lib\route.js:157:13)
+    at done (C:\Users\Natarajan\stark\Backend\node_modules\multer\lib\make-middleware.js:59:7)
+    at indicateDone (C:\Users\Natarajan\stark\Backend\node_modules\multer\lib\make-middleware.js:63:68)
+    at C:\Users\Natarajan\stark\Backend\node_modules\multer\lib\make-middleware.js:176:11
+    at WriteStream.<anonymous> (C:\Users\Natarajan\stark\Backend\node_modules\multer\storage\disk.js:43:9)
+    at WriteStream.emit (node:events:531:35)
+    at finish (node:internal/streams/writable:955:10)
+    at node:internal/streams/writable:936:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
