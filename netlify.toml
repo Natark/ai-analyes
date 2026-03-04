@@ -1,0 +1,9 @@
+[build]
+  base = "Frontend"               # The directory to cd into before building
+  command = "npm install && npm run build" # The command to build the app
+  publish = "dist"                # The directory containing the built site
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
