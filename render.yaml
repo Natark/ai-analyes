@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: resume-analyzer-backend
+    env: node
+    rootDir: Backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: GEMINI_API_KEY
+        value: "YOUR_API_KEY_HERE" # User should override this in Render dashboard
+      - key: PORT
+        value: 10000
+    disk:
+      name: sqlite-data
+      mountPath: /opt/render/project/src/Backend
+      sizeGB: 1
