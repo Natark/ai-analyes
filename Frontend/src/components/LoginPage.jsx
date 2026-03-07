@@ -27,7 +27,7 @@ const LoginPage = ({ onLogin }) => {
             alignItems: 'center',
             minHeight: '80vh'
         }}>
-            <div className="glass-panel" style={{ maxWidth: '400px', width: '100%', padding: '2.5rem' }}>
+            <div className="app-card" style={{ maxWidth: '400px', width: '100%', padding: '2.5rem' }}>
                 <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
                     <div style={{
                         width: '48px',

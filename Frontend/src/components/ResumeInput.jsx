@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 
-const ResumeInput = ({ onAnalyze, isAnalyzing, user }) => {
+const ResumeInput = ({ onAnalyze, isAnalyzing }) => {
     const [isDragging, setIsDragging] = useState(false);
     const [fileName, setFileName] = useState('');
     const [selectedFile, setSelectedFile] = useState(null);

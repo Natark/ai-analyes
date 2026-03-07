@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
-const AnalysisView = ({ data, onReset, user }) => {
+const AnalysisView = ({ data, onReset }) => {
     const [animatedScore, setAnimatedScore] = useState(0);
 
     const {
-        candidateName,
         overallScore,
         concerns,
-        keyStrengths,
         interviewFocus
     } = data;
 
