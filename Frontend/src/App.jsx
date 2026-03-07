@@ -11,9 +11,14 @@ function App() {
   const [view, setView] = useState('input'); // input, analyzing, result
   const [analysisData, setAnalysisData] = useState(null);
 
+  // Set the base URL for API requests.
+  // In local development, vite proxies requests via vite.config.js if this is empty.
+  // In production (Netlify), this can be set to the deployed backend URL (e.g. Render).
+  const API_BASE = import.meta.env.VITE_API_URL || "";
+
   const handleLogin = async (userData) => {
     try {
-      const response = await fetch('/api/login', {
+      const response = await fetch(`${API_BASE}/api/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -48,14 +53,14 @@ function App() {
         const formData = new FormData();
         formData.append('resume', inputData.file);
 
-        response = await fetch('/api/analyze-upload', {
+        response = await fetch(`${API_BASE}/api/analyze-upload`, {
           method: 'POST',
           body: formData, // fetch adds multipart header automatically
         });
       } else {
         // Handle Text Input
         const textToAnalyze = typeof inputData === 'string' ? inputData : inputData.text;
-        response = await fetch('/api/analyze', {
+        response = await fetch(`${API_BASE}/api/analyze`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ text: textToAnalyze })
