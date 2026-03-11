@@ -14,7 +14,8 @@ function App() {
   // Set the base URL for API requests.
   // In local development, vite proxies requests via vite.config.js if this is empty.
   // In production (Netlify), this can be set to the deployed backend URL (e.g. Render).
-  const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+  const rawApiBase = import.meta.env.VITE_API_URL || "http://localhost:5000";
+  const API_BASE = rawApiBase.replace(/\/+$/, '');
 
   const handleLogin = async (userData) => {
     try {
