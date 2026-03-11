@@ -12,10 +12,9 @@ function App() {
   const [analysisData, setAnalysisData] = useState(null);
 
   // Set the base URL for API requests.
-  // In local development, vite proxies requests via vite.config.js if this is empty.
-  // In production (Netlify), this can be set to the deployed backend URL (e.g. Render).
-  const rawApiBase = import.meta.env.VITE_API_URL || "http://localhost:5000";
-  const API_BASE = rawApiBase.replace(/\/+$/, '');
+  // In local development, vite proxies requests via vite.config.js to http://localhost:5000.
+  // In production (Vercel), we use relative paths so it hits the same origin.
+  const API_BASE = import.meta.env.VITE_API_URL || "";
 
   const handleLogin = async (userData) => {
     try {
